@@ -10,6 +10,16 @@ import UIKit
 
 class HappinessViewController: UIViewController {
 
+    var happiness: Int = 50 { // 0 = very sad, 100 = ecstatic
+        didSet {
+            happiness = min(100, max(0, happiness))
+            println("happiness = \(happiness)")
+            updateUI()
+        }
+    }
     
+    private func updateUI() {
+        
+    }
 
 }
